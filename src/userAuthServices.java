@@ -29,7 +29,7 @@ public class userAuthServices {
 	public static void passwordAuth(String passReal, String passEntered) {
 		if (passEntered.equals(passReal)) {
 			System.out.println("Welcome to the Library Services");
-			Main.main(null);
+			LibraryView.main(null);
 		} else {
 			System.out.println("Password is wrong");
 		}
