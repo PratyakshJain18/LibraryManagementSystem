@@ -101,6 +101,7 @@ public class LibraryService {
 		else {
 			System.out.println("Enter the id of the book");
 			int id=kb.nextInt();
+			kb.nextLine();
 			System.out.println("Enter new author");
 			String author=kb.nextLine();
 			String query="update management set author=? where book_id=?";
