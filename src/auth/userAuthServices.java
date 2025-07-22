@@ -1,14 +1,18 @@
+package auth;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+import view.LibraryView;
+
 public class userAuthServices {
+	public static String email;
 	public static void login(Connection connection, Scanner kb) {
 		String query = "SELECT pass FROM users WHERE email =?;";
 		System.out.println("Enter your email");
-		String email = kb.next();
+		email = kb.next();
 		System.out.println("Enter your password");
 		String passEntered = kb.next();
 		PreparedStatement preparedStatement;
